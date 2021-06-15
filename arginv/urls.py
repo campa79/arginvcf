@@ -17,8 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from arginv.views import saludo, despedida, damefecha, calculaEdad #Lo agrego para que lo importe
 from arginv.views import index, index2, index3, erj
-from django.config import settings
-from django.config.urls.static import static
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('index/', index),
