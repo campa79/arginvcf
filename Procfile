@@ -1,0 +1,1 @@
+web: gunicorn arginv.wsgi --log-file -

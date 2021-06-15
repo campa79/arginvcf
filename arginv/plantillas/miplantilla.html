@@ -1,0 +1,45 @@
+<html>
+	<body>
+		<!-- Incluyo la barra con Include -->
+		{% include "barra.html" %}
+
+		<h1 style="color: darkred">
+			Esta es mi primer plantilla
+		</h1>
+
+		{# COMENTARIO EN PLANTILLA Linea simple #}
+
+		{% comment %}
+		Comentario de varias
+		lineas.!
+		{% endcomment %}
+
+
+		{% if nombre_persona == 'Ing. Juanf' %}
+		<p>El curso lo imparte el profesor titular.</p>
+
+		{% else %}
+		<p>El curso lo imparte el profesos suplente.</p>
+
+		{% endif %}
+
+		<p>El nombre es: {{nombre_persona|upper}} {{apellido_persona.lower}}</p>
+		<p>El fecha actual es: {{momento_actual.day}}/{{momento_actual.month}}/{{momento_actual.year}}</p>
+		
+		<p>{{temas}}</p>
+
+		<p><strong>Temas del Curso:</strong></p>
+	<ul>
+		{% if temas %}
+			<p> <!-- Armo el FOR para recorrer la lista -->
+				{% for elTema in temas %}
+					<li>{{elTema}}</li>
+				{% endfor %}
+		{% else %}
+			<p>No hay elementos para mostrar.</p>
+		{% endif %}
+		</p>
+	</ul>	
+
+	</body>
+</html>

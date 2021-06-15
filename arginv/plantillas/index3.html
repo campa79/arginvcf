@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript">
+	<!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+	<!-- BOOTSTRAP -->
+</script>
+
+<head>
+	<meta charset="utf-8">
+	<title>Panel de Cotizaciones (Beta 1.0) - Coinmarketcap</title>
+
+	<h1 div align="center">COINMARKETCAP con APIs/Widgets</h1>
+
+<!-- CSS -->
+<style type="text/css">
+	.container {
+	  display: grid;
+	  grid-template-columns: repeat(3, 1fr);
+	  grid-auto-rows: 0rem;
+	  gap: 1rem;
+	  width: 100%;
+	  max-width: 70rem; /* max-width: 37.5rem; */
+	  padding: 3.5rem; /* padding: 0.5rem; */
+	  margin: 0 auto;
+	  box-sizing: border-box;
+}
+
+@media (max-width: 27em) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;  
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ff9f4d 10%, #fff4c4 0, #fff4c4 90%, #ff9f4d 0, #ff9f4d 100%);
+  /* EL ANTERIOR:  ;background: linear-gradient(-45deg, #ff9f4d 10%, #ffc857 0, #ffc857 90%, #ff9f4d 0, #ff9f4d 100%); */
+}
+
+input[type="range"] {
+  display: block;
+  margin: 2rem auto;
+}
+
+.item {
+  border-radius: 10px;
+  background-color: #faf7fa;
+  /* background-image: linear-gradient(#fdeae3, #fdeae3), linear-gradient(#f8c966,#f8c966), linear-gradient(#f1d6c3,#f1d6c3), linear-gradient(90deg, transparent 20px, #f9e5c7 0, #f9e5c7 calc[100% - 20px], transparent 0); */
+  background-size: 100% 50px, 50px 10px, 60px 10px, auto 50px;
+  background-position: 0 0, 20px 80px, 20px 100px, left 0 bottom 20px;
+  background-repeat: no-repeat;
+}
+
+
+@supports not (gap: 1px) {
+  body {
+    padding-top: 2em;  
+  }
+  
+  body::before {    
+    content: "Your browser doesn't support gap property";
+    display: block;
+    color: #e43;
+    font-weight: bold;
+    position: fixed;
+    top: 1.5em;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    text-align: center;
+  }
+}
+	</style>
+
+</head>
+	<body>
+
+	<script type="text/javascript">
+		setInterval(function(){location.reload();},60*1000);
+	</script>
+
+	<div class="container">
+		<div class="item"><script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="1" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-statsticker="false" data-stats="USD"></div></div>
+
+		<div class="item"><script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="1027" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-statsticker="false" data-stats="USD"></div></div>
+
+		<div class="item"><script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="7186" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-statsticker="false" data-stats="USD"></div></div>
+	</div>
+	
+	<div class="container">
+		<div class="item"><script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="3890" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-statsticker="false" data-stats="USD"></div></div>
+
+		<div class="item"><script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="1958" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-statsticker="false" data-stats="USD"></div></div>
+
+		<div class="item"><script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="6636" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-statsticker="false" data-stats="USD"></div></div>
+	</div>
+
+	<div class="container">
+		<div class="item"><script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="3077" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-statsticker="false" data-stats="USD"></div></div>
+
+		<div class="item"><script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="1975" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-statsticker="false" data-stats="USD"></div></div>
+
+		<div class="item"><script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="1839" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-statsticker="false" data-stats="USD"></div></div>
+	</div>
+
+
+	<div class="container">
+		<div class="item"><script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="74" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-statsticker="false" data-stats="USD"></div></div>
+
+		<div class="item"><script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="7083" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-statsticker="false" data-stats="USD"></div></div>
+
+		<div class="item"><script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="1567" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-statsticker="false" data-stats="USD"></div></div>
+	</div>
+
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<script type="text/javascript">
+/* Cargo mi API KEY de COINMARKETCAP */
+var apikey = {
+	key:'3765530a-5d45-4dfe-8b05-43168ba0deb1'
+}
+
+request('GET', 'https://pro-api.coinmarketcap.com/v1/global-metrics/quotes/latest?CMC_PRO_API_KEY=' + apikey.key)
+	.then((rl) => {
+		var xl = JSON.parse(rl.target.responseText);
+		console.log(xl.data.quote.USD.total_market_cap);
+		console.log(xl.data.quote.USD.total_volume_24h);
+		console.log(xl.data.quote.USD.altcoin_volume_24h);
+	}).catch()
+
+/*Funcion para el request de la API*/
+function request(method, url){
+	return new Promise(function (resolve, reject){
+		var xhr = new XMLHttpRequest();
+		xhr.open(method, url);
+		xhr.onload = resolve;
+		xhr.onerror = reject;
+		xhr.send();
+	});
+}
+	</script>
+
+<head>
+	<meta charset="utf-8">
+	<title>ArgentinaInversores.ar</title>
+		<!-- BOOTSTRAP -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+		<!-- BOOTSTRAP -->
+</head>
+	
+	<h1 div align="center">PROBANDO COINMARKETCAP con APIs del Total Market Cap</h1>
+	<h2 div align="center">www.argentinainversores.com.ar</h2>
+
+<body>
+
+	<script type="text/javascript">
+		setInterval(function(){location.reload();},60*1000);
+	</script>
+
+</body>
+</html>
